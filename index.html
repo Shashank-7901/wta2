@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      table, th, td {
+    border:1px solid black;
+  }
+    </style>
+
+  </head>
+  <body>
+    <table>
+      <tr>
+  <th colspan="4">Calculator</th>
+
+</tr>
+<tr>
+  <td>value1</td>
+  <td><input type="text" name="" value=""></td>
+  <td>value2</td>
+  <td><input type="text" name="" value=""></td>
+</tr>
+<tr>
+  <td><button class="add" type="button" name="button">Addition</button></td>
+  <td><button class="sub" type="button" name="button">Subtraction</button></td>
+  <td><button class="mul" type="button" name="button">Multiplication</button></td>
+  <td><button class="div" type="button" name="button">Division</button></td>
+</tr>
+<tr>
+  <td>Answer:</td>
+  <td><input type="text" name="" value=""></td>
+  <td colspan="2"><button class="clear" style="width: 100px;" type="button" name="button">clear all</button></td>
+</tr>
+
+    </table>
+    <script type="text/javascript">
+    window.onload = () => {
+
+
+      document.getElementsByClassName("add")[0].addEventListener("click", addition);
+      document.getElementsByClassName("sub")[0].addEventListener("click", subtraction);
+      document.getElementsByClassName("div")[0].addEventListener("click", division);
+      document.getElementsByClassName("mul")[0].addEventListener("click", multiplication);
+      document.getElementsByClassName("clear")[0].addEventListener("click", clearAll);
+
+
+    };
+
+
+
+    function addition()
+    {
+
+
+      var val1 = parseInt(document.querySelectorAll("input")[0].value);
+      var val2 = parseInt(document.querySelectorAll("input")[1].value);
+
+      var result = val1 + val2
+
+      document.querySelectorAll("input")[2].value = result;
+
+    }
+
+    function subtraction()
+    {
+      var val1 = parseInt(document.querySelectorAll("input")[0].value);
+      var val2 = parseInt(document.querySelectorAll("input")[1].value);
+
+      var result = val1 - val2
+
+      document.querySelectorAll("input")[2].value = result;
+
+    }
+    function division()
+    {
+      var val1 = parseInt(document.querySelectorAll("input")[0].value);
+      var val2 = parseInt(document.querySelectorAll("input")[1].value);
+
+      var result = val1/val2
+
+      document.querySelectorAll("input")[2].value = result;
+
+    }
+
+    function multiplication()
+    {
+
+      var val1 = parseInt(document.querySelectorAll("input")[0].value);
+      var val2 = parseInt(document.querySelectorAll("input")[1].value);
+
+      var result = val1*val2
+
+      document.querySelectorAll("input")[2].value = result;
+
+    }
+
+    function clearAll()
+    {
+
+        document.location.reload();
+
+
+    }
+
+    </script>
+  </body>
+</html>
